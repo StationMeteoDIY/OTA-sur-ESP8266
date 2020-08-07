@@ -1,9 +1,9 @@
 #include <ESP8266WiFi.h>
 #include <ArduinoOTA.h>
 
-#include "connect.h"
-// const char* ssid = "_MON_SSID_";                   // SSID du réseau Wifi
-// const char* password = "_MOT_DE_PASSE_WIFI_";      // Mot de passe du réseau Wifi.
+// Donnees WIFI a renseigner
+const char* ssid = "_MON_SSID_";                   // SSID du réseau Wifi
+const char* password = "_MOT_DE_PASSE_WIFI_";      // Mot de passe du réseau Wifi.
 
 
 void setup() {
@@ -64,14 +64,7 @@ void initOTA() {
   
   // code à exécuter au démarrage de la mise à jour
   ArduinoOTA.onStart([]() {
-    String type;
-    if (ArduinoOTA.getCommand() == U_FLASH)
-      type = "sketch";
-    else // U_SPIFFS
-      type = "filesystem";
-
-    // NOTE: si vous mettez à jour SPIFFS, démonter SPIFFS à l'aide de SPIFFS.end ()
-    Serial.println("Début de update " + type);
+    Serial.println("\nDébut de update");
   });
   
   // code à exécuter à la fin de la mise à jour
