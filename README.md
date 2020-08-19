@@ -16,4 +16,4 @@ Il faut installer l'IDE Arduino, et y intégrer quelques configurations :
 
 
 # Tuto vidéo
-Vidéo explicative sur YouTube : (A venir)
+Vidéo explicative sur YouTube : https://youtu.be/EBX1f232K9w
